@@ -19,6 +19,8 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+// setup partials on view engine
 hbs.registerPartials(path.join(__dirname, 'partials'));
 
 // uncomment after placing your favicon in /public
@@ -37,6 +39,8 @@ app.use('/', indexRouter);
 // catch 404 and forward to error handler
 app.use(handle404);
 app.use(basicErrorHandler);
+
+// register port on which server will be run
 export const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
