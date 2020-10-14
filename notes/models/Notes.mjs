@@ -21,6 +21,6 @@ export class AbstractNotesStore {
   async create(key, title, body) {  }
   async read(key) {  }
   async destroy(key) {  }
-  async keyList() {  }
+  async keylist() {  }
   async count() {  }
 }
